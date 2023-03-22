@@ -1,0 +1,29 @@
+Do the below programs in anonymous function & IIFE
+   i)Print odd numbers in an array
+  ii)Convert all the strings to title caps in a string array
+ iii)Sum of all numbers in an array
+  iv)Return all the prime numbers in an array
+   v)Return all the palindromes in an array
+  vi)Return median of two sorted arrays of the same size.
+ vii)Remove duplicates from an array
+viii)Rotate an array by k times
+
+iii)Sum of all numbers in an array
+My code:
+(ananymous Function)
+var num=[1,2,3,4,5,6,7,8,9];
+var s=0;
+var any=function(x){
+for(var i=0;i<num.length;i++)
+  s+=num[i];
+  console.log(s);
+}
+any(num);
+
+(IIFE)
+var num=[1,2,3,4,5,6,7,8,9];
+var any=(function(x){
+for(var i=0;i<num.length;i++)
+   s+=num[i];
+  console.log(s);
+})();
