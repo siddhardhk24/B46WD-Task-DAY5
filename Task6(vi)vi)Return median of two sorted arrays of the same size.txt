@@ -1,0 +1,47 @@
+Do the below programs in anonymous function & IIFE
+   i)Print odd numbers in an array
+  ii)Convert all the strings to title caps in a string array
+ iii)Sum of all numbers in an array
+  iv)Return all the prime numbers in an array
+   v)Return all the palindromes in an array
+  vi)Return median of two sorted arrays of the same size.
+ vii)Remove duplicates from an array
+viii)Rotate an array by k times
+
+vi)Return median of two sorted arrays of the same size.
+(Ananymous Function)
+My code:
+var arr1=[2,4,5,7,9];
+var arr2=[1,3,5,6,8];
+var fun=function(arr1,arr2){
+arr1=arr1.concat(arr2);
+arr1.sort();
+var n=Math.round((arr1.length-1)/2);
+var m=0;
+if(n%2!=0)
+    m+=(arr1[n-1]+arr1[n])/2;
+else
+    m+=arr1[n+1];
+
+console.log(arr1);
+console.log(m);
+}
+fun(arr1,arr2);
+
+(IIFE)
+My code:
+var fun=(function(){
+    var arr1=[2,4,5,7,9];
+    var arr2=[1,3,5,6,8];
+arr1=arr1.concat(arr2);
+arr1.sort();
+var n=Math.round((arr1.length-1)/2);
+var m=0;
+if(n%2!=0)
+    m+=(arr1[n-1]+arr1[n])/2;
+else
+    m+=arr1[n+1];
+
+console.log(arr1);
+console.log(m);
+})();
