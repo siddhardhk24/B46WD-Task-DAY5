@@ -1,0 +1,28 @@
+3.Do the below programs in arrow functions.
+   i)Print odd numbers in an array
+  ii)Convert all the strings to title caps in a string array
+ iii)Sum of all numbers in an array
+  iv)Return all the prime numbers in an array
+   v)Return all the palindromes in an array
+
+
+ii)Convert all the strings to title caps in a string array
+Arrow Function
+My code:
+var arr = ["rajini", "kamal", "vijay"];
+var titleCaps = ()=>{
+    let len = arr.length;
+    var tc =[];
+    for(var i =0;i<len;i++)
+    {
+      var str=arr[i];
+     
+        var fst=str.charAt(0).toUpperCase();
+        var lst=str.slice(1,str.length);
+        str=fst+lst;
+        tc.push(str);
+   }
+    console.log(tc);
+    
+};
+titleCaps();
