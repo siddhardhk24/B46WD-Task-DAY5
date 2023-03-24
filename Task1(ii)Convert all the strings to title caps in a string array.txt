@@ -12,17 +12,38 @@ viii)Rotate an array by k times
 ii)Convert all the strings to title caps in a string array
 My code:
 (ananymous)
-var titlestr=function tit(str) {
-    return str.toLowerCase().split(' ').map(function(word) {
-        return (word.charAt(0).toUpperCase() + word.slice(1));
-    }).join(' ');
-    }
-    console.log(titlestr("coding is simple with javascript"));
+var arr = ["rajini", "kamal", "vijay"];
+var titleCaps = function fun(arr){
+    let len = arr.length;
+    var tc =[];
+    for(var i =0;i<len;i++)
+    {
+      var str=arr[i];
+     
+        var fst=str.charAt(0).toUpperCase();
+        var lst=str.slice(1,str.length);
+        str=fst+lst;
+        tc.push(str);
+   }
+    console.log(tc);
     
-(IIFE)
-var str="coding is simple with javascript";
-var titlestr=(function tit(str) {
-    return str.toLowerCase().split(' ').map(function(word) {
-        return (word.charAt(0).toUpperCase() + word.slice(1));
-    }).join(' ');
-    })();
+};
+ titleCaps(arr);
+ 
+ (IIFE)
+ var arr = ["rajini", "kamal", "vijay"];
+var titleCaps = (function fun(){
+    let len = arr.length;
+    var tc =[];
+    for(var i =0;i<len;i++)
+    {
+      var str=arr[i];
+     
+        var fst=str.charAt(0).toUpperCase();
+        var lst=str.slice(1,str.length);
+        str=fst+lst;
+        tc.push(str);
+   }
+    console.log(tc);
+    
+})();
