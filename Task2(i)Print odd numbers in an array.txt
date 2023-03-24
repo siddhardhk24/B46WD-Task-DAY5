@@ -1,0 +1,19 @@
+3.Do the below programs in arrow functions.
+   i)Print odd numbers in an array
+  ii)Convert all the strings to title caps in a string array
+ iii)Sum of all numbers in an array
+  iv)Return all the prime numbers in an array
+   v)Return all the palindromes in an array
+
+
+i)Print odd numbers in an array
+Arrow Function
+My code:
+
+var num=[1,2,3,4,5,6,7,8,9];
+var any=(num)=>{
+for(var i=0;i<num.length;i++)
+ if(num[i]%2!=0)
+  console.log(num[i]);
+};
+any(num);
