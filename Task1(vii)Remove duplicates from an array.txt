@@ -1,0 +1,75 @@
+Do the below programs in anonymous function & IIFE
+   i)Print odd numbers in an array
+  ii)Convert all the strings to title caps in a string array
+ iii)Sum of all numbers in an array
+  iv)Return all the prime numbers in an array
+   v)Return all the palindromes in an array
+  vi)Return median of two sorted arrays of the same size.
+ vii)Remove duplicates from an array
+viii)Rotate an array by k times
+
+
+vii)Remove duplicates from an array
+(Ananymous Function)
+let chars = [1,2,4,2,1,3,4];
+var n=chars.length;
+var c=0;
+var dup = function (z)
+{  
+for(var i=0;i<n;i++)
+{
+  for(var j=i+1;j<n;j++)
+    if(chars[i]==chars[j])
+    {
+      var p=j;
+      break;
+    }
+  for(var k=p;k<n;k++)
+  {
+   chars[k]=chars[k+1];
+   if(k==n-1)
+     n--;
+  }
+   
+}
+//n=n-c;
+
+for(var l=0;l<n;l++)
+console.log(chars[l]);
+
+//chars.length-=c;
+};
+
+dup(chars);
+
+
+(IIFE)
+
+var dup = (function (z)
+{  
+var chars = [1,2,4,2,1,3,4];
+var n=chars.length;
+var c=0;
+for(var i=0;i<n;i++)
+{
+  for(var j=i+1;j<n;j++)
+    if(chars[i]==chars[j])
+    {
+      var p=j;
+      break;
+    }
+  for(var k=p;k<n;k++)
+  {
+   chars[k]=chars[k+1];
+   if(k==n-1)
+     n--;
+  }
+   
+}
+//n=n-c;
+
+for(var l=0;l<n;l++)
+console.log(chars[l]);
+
+//chars.length-=c;
+})();
