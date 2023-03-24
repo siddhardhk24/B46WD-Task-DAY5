@@ -1,0 +1,38 @@
+3.Do the below programs in arrow functions.
+   i)Print odd numbers in an array
+  ii)Convert all the strings to title caps in a string array
+ iii)Sum of all numbers in an array
+  iv)Return all the prime numbers in an array
+   v)Return all the palindromes in an array
+
+
+v)Return all the palindromes in an array
+Arrow Function
+My code:
+
+var namee=["sidhu","arunura","valav","dhinesh"];
+var any=()=>{
+  for(var i=0;i<namee.length;i++)
+  {
+    var str=namee[i];
+    var k=0;
+    var j=str.length-1;
+    while(k<j)
+    {
+        var f=0;
+        if(str[k]==str[j])
+            {
+                k++;
+                j--;
+            }
+        else
+        {
+            f=1;
+            break;
+        }
+    }
+    if(f==0)
+    console.log(str);
+  }
+
+}
